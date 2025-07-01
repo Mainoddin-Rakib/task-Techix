@@ -4881,7 +4881,7 @@ p {
   rotate: -30deg;
 }
 .service-one__single-card:hover .btn-wrapper .theme-btn {
-  width: 100%;
+  width: max-content;
   padding: 15px 20px;
   opacity: 1;
 }
