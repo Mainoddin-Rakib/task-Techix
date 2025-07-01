@@ -4857,35 +4857,35 @@ p {
   background-color: var(--text);
   color: var(--white);
 }
-.service-one__single-card:hover {
+.service-one__single-card.active, .service-one__single-card:hover {
   background-color: var(--theme);
 }
-.service-one__single-card:hover .shape-1 {
-  filter: opacity(0.4);
+.service-one__single-card.active .shape-1, .service-one__single-card:hover .shape-1 {
+  filter: opacity(0.3);
 }
-.service-one__single-card:hover h3 {
+.service-one__single-card.active h3, .service-one__single-card:hover h3 {
   color: var(--white);
 }
-.service-one__single-card:hover .icon-2 {
+.service-one__single-card.active .icon-2, .service-one__single-card:hover .icon-2 {
   color: var(--white);
 }
-.service-one__single-card:hover .num {
+.service-one__single-card.active .num, .service-one__single-card:hover .num {
   -webkit-text-stroke-color: var(--white);
 }
-.service-one__single-card:hover .list li {
+.service-one__single-card.active .list li, .service-one__single-card:hover .list li {
   color: var(--white);
 }
-.service-one__single-card:hover .list li i {
+.service-one__single-card.active .list li i, .service-one__single-card:hover .list li i {
   color: var(--theme-2);
   margin-right: 10px;
   rotate: -30deg;
 }
-.service-one__single-card:hover .btn-wrapper .theme-btn {
+.service-one__single-card.active .btn-wrapper .theme-btn, .service-one__single-card:hover .btn-wrapper .theme-btn {
   width: max-content;
   padding: 15px 20px;
   opacity: 1;
 }
-.service-one__single-card:hover .btn-wrapper .icon {
+.service-one__single-card.active .btn-wrapper .icon, .service-one__single-card:hover .btn-wrapper .icon {
   background-color: var(--theme-2);
   color: var(--black-2);
 }
