@@ -1,0 +1,70 @@
+//>>>>> Mouse Cursor Start <<<<<//
+
+.tp-cursor #cursor-outer {
+    display: block;
+}
+
+#cursor-outer {
+    position: absolute;
+    display: none;
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+    z-index: 99999;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+#cursorDot {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    background-color: $theme-color;
+    border-radius: 50%;
+    justify-content: center;
+    mix-blend-mode: difference;
+    color: transparent;
+}
+
+
+/* cursorDot drag 
+============= */
+#cursorDot .cursorDot-drag {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: $white;
+    line-height: 1.2;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+#cursorDot.with-blur {
+  background-color: rgba(14, 14, 14, 0.2);
+}
+
+/* cursorDot close 
+============== */
+#cursorDot.cursorDot-close-enabled {
+    opacity: 1 !important;
+}
+#cursorDot .cursorDot-close {
+    position: absolute;
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $theme-color;
+    line-height: 1;
+    text-align: center;
+}
+
+.tp-magnetic-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,114 @@
+.service-one {
+    &__inner {
+        position: relative;
+    }
+    &__single-card {
+        padding: 50px 40px 50px 50px;
+        background-color: $white;
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.06);
+        position: relative;
+        z-index: 1;
+        @include transition;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .shape-1 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            @include transition;
+        }
+        .icon-2 {
+            color: $black-2;
+            @include transition;
+        }
+        .num {
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $black-2;
+            color: transparent;
+            font-size: 80px;
+            font-weight: 600;
+            letter-spacing: -1.6px;
+            line-height: 1;
+            position: relative;
+            @include transition;
+        }
+        h3 {
+            color: $black-2;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 35px;
+            letter-spacing: -0.6px;
+        }
+        .list {
+            padding-top: 80px;
+            li {
+                color: $black-2;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 3px 0;
+                @include transition;
+                i {
+                    color: $text-color;
+                    margin-right: 10px;
+                    rotate: -30deg;
+                    @include transition;
+                }
+            }
+        }
+        .btn-wrapper {
+            .theme-btn {
+                width: 0;
+                padding: 0;
+                opacity: 0;
+            }
+            .icon {
+                background-color: $text-color;
+                color: $white;
+            }
+        }
+        &:hover {
+            background-color: $theme-color;
+            .shape-1 {
+                filter: opacity(0.4);
+            }
+            h3 {
+                color: $white;
+            }
+            .icon-2 {
+                color: $white;
+            }
+            .num {
+                -webkit-text-stroke-color: $white;
+            }
+            .list {
+                li {
+                    color: $white;
+                    i {
+                        color: $theme-color-2;
+                        margin-right: 10px;
+                        rotate: -30deg;
+                    }
+                }
+            }
+            .btn-wrapper {
+                .theme-btn {
+                    width: 100%;
+                    padding: 15px 20px;
+                    opacity: 1;
+                }
+                .icon {
+                    background-color: $theme-color-2;
+                    color: $black-2;
+                }
+            }
+        }
+    }
+    .array-button {
+        position: absolute;
+        top: 100px;
+        right: 0;
+    }
+}

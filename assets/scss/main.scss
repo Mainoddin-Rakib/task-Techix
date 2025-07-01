@@ -1,0 +1,23 @@
+/*CSS Table Of Content Ends Here*/
+
+//   <!-- / Utils Start /-->
+@import "utils/variables";
+@import "utils/animation";
+@import "utils/mixins";
+@import "utils/space";
+@import "utils/typography";
+
+
+//   <!-- / Components Start /-->
+@import "components/buttons";
+@import "components/cursor";
+@import "components/header";
+@import "components/helper";
+@import "components/offcanvas";
+@import "components/preloader";
+@import "components/scroll";
+@import "components/section";
+
+//   <!-- / Layouts Start /-->
+@import "layouts/techix";
+

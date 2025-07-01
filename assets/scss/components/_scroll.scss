@@ -1,0 +1,53 @@
+//>>>>> Scroll up Start <<<<<//
+
+.scroll-up {
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    position: fixed;
+    right: 25px;
+    bottom: 35px;
+    height: 50px;
+    width: 50px;
+    @include transition;
+}
+
+.scroll-up::after {
+    position: absolute;
+    font-family: $fa;
+    content: "\f176";
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    color: $theme-color;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    @include transition;
+}
+
+.scroll-up svg path {
+    fill: none;
+}
+
+.scroll-up svg.scroll-circle path {
+    stroke: $theme-color;
+    stroke-width: 4px;
+    box-sizing: border-box;
+    @include transition;
+}
+
+.scroll-up.active-scroll {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

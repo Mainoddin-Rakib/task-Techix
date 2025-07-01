@@ -1,0 +1,94 @@
+//>>>>> Component Button Here <<<<<//
+.btn-wrapper {
+    display: inline-flex;
+    align-items: center;
+    .theme-btn {
+        position: relative;
+        z-index: 2;
+        vertical-align: middle;
+        display: inline-block;
+        border: none;
+        text-align: center;
+        background-color: $white;
+        font-family: $theme-font;
+        color: $bg-color;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        padding: 15px 20px;
+        border-radius: 40px;
+        max-height: 40px;
+        transition: 0.5s ease-in-out;
+        outline: none !important;
+        overflow: hidden;
+        cursor: pointer;
+        &::after {
+            content: "";
+            background-color: $white;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: circle(0% at 0% 50%);
+            transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.7s;
+            z-index: -1;
+        }
+        &:hover::after {
+            clip-path: circle(100% at 50% 50%);
+            transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 4s;
+        }
+        &:hover {
+            background-color: $white;
+        }
+   
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+        background-color: $white;
+        color: $bg-color;
+        position: relative;
+        transition: 0.5s ease-in-out;
+        outline: none !important;
+        overflow: hidden;
+        @include icon;
+        i {
+            rotate: -45deg;
+            @include transition;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            background-color: $white;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: circle(0% at 0% 50%);
+            transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.7s;
+        }
+    }
+    &:hover {
+        .icon {
+            i {
+                rotate: 0deg;
+                color: $black-2
+            }
+            &::after {
+                clip-path: circle(100% at 50% 50%);
+                transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 4s;
+            }
+        }
+        .theme-btn {
+            background-color: $white;
+            &::after {
+                clip-path: circle(100% at 50% 50%);
+                transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 4s;
+            }
+        }
+    }
+}
